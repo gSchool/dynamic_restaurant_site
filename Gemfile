@@ -6,6 +6,7 @@ gem 'rack', '~> 1.5.2'
 gem "puma", "~> 2.8.1"
 
 gem 'rspec', group: [:development, :test]
+gem "timecop", "~> 0.7.1"
 
 group :test do
   gem 'launchy', '~> 2.3.0'
