@@ -35,6 +35,11 @@ img {
     vertical-align: middle;
 }
 
+img.small {
+    width: 20%;
+    vertical-align: middle;
+}
+
 ul {
     font-size: 1.5em;
     display: inline-block;
@@ -45,7 +50,12 @@ a {
     color: #efa609;
 }
 
+div.item{
+    display: inline-block;
+}
+
 dl {
+    float: right;
     font-size: 1.5em;
     display: inline-block;
     width: 40%;
