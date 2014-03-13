@@ -8,4 +8,10 @@ class Item
     @image_name = image_name
   end
 
+  def == (other)
+    self.name == other.name
+    self.price == other.price
+    self.description == other.description
+  end
+
 end
