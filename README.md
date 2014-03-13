@@ -26,3 +26,5 @@ You can find them in the `spec/features` directory.
 ## Development
 
 NOTE: Whenever you change a ruby file, you need to stop the server, and restart it.
+
+## Heroku Website can be found at http://thawing-cove-8931.herokuapp.com/
