@@ -7,8 +7,8 @@ describe Menu do
     menu = Menu.new
 
     expect(menu.item).to match_array [
-                                        Item.new("Channa Masala", 5.95, "Yummy"),
-                                        Item.new("Chicken Tikka Masala", 5.95, "Yummy Googness")
+                                        Item.new("Channa Masala", 5.95, "Yummy Goodness"),
+                                        Item.new("Chicken Tikka Masala", 5.95, "Yummy Goodness")
                                       ]
   end
 end
