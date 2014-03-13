@@ -31,7 +31,7 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <% Menu.new.items.each do |item| %>
+    <% Menu.new.create_menu("config/menu.csv").each do |item| %>
       <dt><%= item.name %></dt>
       <dd><%= item.price %></dd>
     <% end %>
@@ -49,3 +49,8 @@
 
 </body>
 </html>
+
+
+
+<%=  %>
+<%  %>

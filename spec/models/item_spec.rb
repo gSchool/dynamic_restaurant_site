@@ -22,7 +22,11 @@ describe Item do
     expect(@item.image_name).to eq "picture"
   end
 
+  it 'knows that two items are the same if they have the same attributes' do
+    item1 = Item.new("Channa Masala", 5.95, "Yummy goodness", "picture")
+    item2 = Item.new("Channa Masala", 5.95, "Yummy goodness", "picture")
 
-
+    expect(item1).to eq item2
+  end
 
 end
