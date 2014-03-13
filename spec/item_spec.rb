@@ -8,10 +8,14 @@ describe Item do
     expect(item.name).to eq ("Shalala")
   end
   it 'has price'do
-  pending
+    item = Item.new("Shalala", 5.95, "Tastes")
+
+    expect(item.price).to eq (5.95)
   end
 
   it 'has description' do
-  pending
+    item = Item.new("Shalala", 5.95, "Tastes")
+
+    expect(item.description).to eq ("Tastes")
   end
 end

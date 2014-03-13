@@ -8,4 +8,12 @@ class Item
   def name
     @name
   end
+
+  def price
+    @price
+  end
+
+  def description
+    @description
+  end
 end
