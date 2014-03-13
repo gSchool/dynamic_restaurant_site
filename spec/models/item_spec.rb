@@ -19,4 +19,11 @@ describe Item do
 
     expect(item.description).to eq "Yummy Goodness"
   end
+
+  it "knows two iteams are the same if the have the same attributes" do
+    item1 = Item.new("Channa Masala", 5.95, "Yummy Goodness")
+    item2 = Item.new("Channa Masala", 5.95, "Yummy Goodness")
+
+    expect(item1).to eq item2
+  end
 end

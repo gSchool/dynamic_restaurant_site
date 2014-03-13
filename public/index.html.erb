@@ -31,7 +31,7 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <% [Item.new("Channa Masala", 5.95, "Yummy Goodness"), Item.new("Chicken Tikka Masala", 5.95, "Yummy Goodness")].each do |item| %>
+    <% Menu.new.items.each do |item| %>
       <dt><%= item.name %> - <%= item.price %> </dt>
       <dd> <%= item.description %> </dd>
     <% end %>
