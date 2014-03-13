@@ -1,4 +1,5 @@
 require 'erb'
+require 'menu'
 
 class App
   def call(env)
@@ -20,7 +21,8 @@ class App
     if File.exist?(index_html)
       File.open(index_html, File::RDONLY)
     else
-      [ERB.new(File.open(index_erb, File::RDONLY).read).result]
+      file_contents = File.open(index_erb, File::RDONLY).read
+      [ERB.new(file_contents).result]
     end
   end
 end
