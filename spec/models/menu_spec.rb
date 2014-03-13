@@ -3,7 +3,7 @@ require 'menu'
 
 describe Menu do
   it "knows about the items" do
-    menu = Menu.new()
+    menu = Menu.new(File.expand_path('../dynamic_restaurant_site/config/menu.csv'))
 
     expect(menu.items).to match_array [Item.new("Channa Masala", "5.95", "Yummy goodness", "food1.jpg"),
                                        Item.new("Chicken Tikka Masala", "5.95", "Yummy goodness", "food2.jpg"),

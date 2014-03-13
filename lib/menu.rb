@@ -2,8 +2,8 @@ require 'item'
 require 'csv'
 
 class Menu
-  def initialize
-    @spreadsheet = CSV.read(File.expand_path('../dynamic_restaurant_site/config/menu.csv'), headers: true)
+  def initialize(file)
+    @spreadsheet = CSV.read(file, headers: true)
   end
 
   def items
