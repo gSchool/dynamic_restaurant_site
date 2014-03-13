@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'item'
 
 describe 'Visiting the home page' do
   
@@ -7,5 +8,11 @@ describe 'Visiting the home page' do
     expect(page).to have_content("Channa Masala")
     expect(page).to have_content("Chicken Tikka Masala")
   end
-  
+
+  it "displays the current year for the copyright" do
+    visit "/"
+    within("footer") do
+    expect(page).to have_content("2014")
+    end
+    end
 end
