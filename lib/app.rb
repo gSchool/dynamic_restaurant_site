@@ -15,8 +15,8 @@ class App
   private
 
   def body
-    index_html = File.expand_path('../../public/index.html', __FILE__)
-    index_erb = File.expand_path('../../public/index.html.erb', __FILE__)
+    index_html = File.expand_path('../../public/index.html.erb', __FILE__)
+    index_erb = File.expand_path('../../public/index.html.erb.erb', __FILE__)
     if File.exist?(index_html)
       File.open(index_html, File::RDONLY)
     else
