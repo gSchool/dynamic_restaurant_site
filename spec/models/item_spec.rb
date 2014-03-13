@@ -21,6 +21,7 @@ describe Item do
   end
 
   it "knows two iteams are the same if the have the same attributes" do
+
     item1 = Item.new("Channa Masala", 5.95, "Yummy Goodness")
     item2 = Item.new("Channa Masala", 5.95, "Yummy Goodness")
 
