@@ -1,5 +1,5 @@
 class Item
-  attr_reader :name, :price, :description, :image_name
+  attr_reader :name, :description, :image_name
 
   def initialize(name, price, description, image_name)
     @name = name
@@ -12,6 +12,14 @@ class Item
     self.name == other.name
     self.price == other.price
     self.description == other.description
+  end
+
+  def price
+    if Time.now.wednesday?
+      return @price *0.1
+    else
+      @price
+    end
   end
 
 end
