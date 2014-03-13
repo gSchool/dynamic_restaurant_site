@@ -2,6 +2,7 @@ $LOAD_PATH.unshift(File.expand_path('../lib', __FILE__))
 require 'app'
 require 'capybara'
 require 'capybara/dsl'
+require 'capybara/rspec'
 
 Capybara.app = App.new
 
