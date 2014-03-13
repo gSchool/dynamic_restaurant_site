@@ -1,8 +1,17 @@
 require 'item'
+require 'csv'
 
 class Menu
+  def initialize
+    @spreadsheet = CSV.read(File.expand_path('../dynamic_restaurant_site/config/menu.csv'), headers: true)
+  end
+
   def items
-    [ Item.new("Channa Masala", 5.95, "Yummy goodness"),
-      Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness") ]
+    a = []
+    @spreadsheet.each do |row|
+      a.push(Item.new(row["name"], row["price"], row["description"], row["image"]))
+    end
+    a
   end
 end
+
