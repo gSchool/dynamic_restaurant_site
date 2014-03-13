@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'item'
 
 describe 'Visiting the home page' do
   
