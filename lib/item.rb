@@ -6,4 +6,10 @@ class Item
     @price = price
     @description = description
   end
+
+  def == (other)
+    self.name == other.name
+    self.price == other.price
+    self.description == other.description
+  end
 end
