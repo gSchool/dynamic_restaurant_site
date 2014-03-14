@@ -10,4 +10,4 @@ describe Menu do
                                        Item.new("Saag Paneer", "5.95", "Yummy goodness", "food3.jpg"),
                                        Item.new("Alu Gobi", "5.95", "Yummy goodness", "food4.jpg")]
   end
-end0
+end
