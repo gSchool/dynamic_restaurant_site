@@ -12,6 +12,7 @@
 
 <main>
   <img src="/images/restaurant.jpg">
+
   <p>
     But be all this as it may; let the unseen, ambiguous synod in the air, or the vindictive
     princes and potentates of fire, have to do or not with earthly Ahab, yet, in this present
@@ -30,17 +31,18 @@
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
 
+  <div class="menu">
+    <% x=1 %>
+    <% Menu.new(File.expand_path('./config/menu.csv')).items.each do |item| %>
+      <div class="item item" id="x<%= x %>" >
+        <img class="small" src="/images/<%= item.image_name %>">
 
-  <% Menu.new(File.expand_path('./config/menu.csv')).items.each do |item| %>
-    <div class="menu">
-      <img class="small" src="/images/<%= item.image_name %>">
-
-      <div class="item"><p><%= item.name %> - $<%= item.price %></p>
-
-        <p> <%= item.description %></p></div>
-    </div>
-  <% end %>
-
+        <p><%= item.name %> - $<%= item.price %></>
+        <p> <%= item.description %></p>
+      </div>
+      <%x+=1%>
+    <% end %>
+  </div>
 
 </main>
 
