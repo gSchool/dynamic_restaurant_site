@@ -15,9 +15,11 @@ class Menu
     filename = 'config/' + file
 
     filepath = File.expand_path(filename)
-    CSV.foreach(filepath).each do |line|
-      data << line
+    CSV.foreach(filepath) do |line|
+      one, two, three, four = line
+      data << Item.new(one,two,three,four)
     end
     data
+
   end
 end
