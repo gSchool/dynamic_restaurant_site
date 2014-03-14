@@ -25,4 +25,10 @@ describe Item do
     item2 = Item.new("Channa Masala", 5.95, "Yummy goodness")
     expect(item1).to eq item2
   end
+
+  it "discounts the prices by 10% on Wendsdays" do
+    item = Item.new("Channa Masala", 5.95, "Yummy goodness", "food1.jpg")
+    wed = Date.new(2014,03,12)
+    expect(item.price(wed)).to eq("5.36")
+  end
 end
