@@ -16,7 +16,7 @@ class Item
 
   def price
     if Time.now.wednesday?
-      return @price *0.1
+      return @price -= @price *0.1
     else
       @price
     end
