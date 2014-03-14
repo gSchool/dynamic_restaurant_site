@@ -31,7 +31,7 @@
   </p>
 
 
-  <% Menu.new(File.expand_path('../dynamic_restaurant_site/config/menu.csv')).items.each do |item| %>
+  <% Menu.new(File.expand_path('./config/menu.csv')).items.each do |item| %>
     <div class="menu">
       <img class="small" src="/images/<%= item.image_name %>">
 
