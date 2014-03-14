@@ -13,4 +13,6 @@ describe Menu do
                                         Item.new("Alu Gobi", "5.95", "Yummy goodness", "food4.jpg"),
                                       ]
   end
+
 end
+
