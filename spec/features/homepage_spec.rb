@@ -7,7 +7,7 @@ describe 'Visiting the home page' do
     expect(page).to have_content("Channa Masala")
     expect(page).to have_content("Chicken Tikka Masala")
   end
-  it "displays all of the menu items" do
+  it "displays the current year within the footer" do
     visit "/"
     within("footer") do
       expect(page).to have_content("2014")
