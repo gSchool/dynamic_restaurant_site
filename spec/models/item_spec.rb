@@ -18,4 +18,8 @@ describe Item do
   it 'has a description' do
     expect(@item.description).to eq "Yummy goodness"
   end
+
+  it 'has a picture' do
+    expect(@item.picture).to eq "food1"
+  end
 end

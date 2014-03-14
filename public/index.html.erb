@@ -33,6 +33,7 @@
   <dl>
     <% Menu.new.items.each do |item| %>
        <dt><%= item.name %> - <%= item.price%></dt>
+       <dd><img src="/images/<%= item.picture %>.jpg"></dd>
        <dd><%= item.description %> </dd>
     <% end %>
   </dl>
