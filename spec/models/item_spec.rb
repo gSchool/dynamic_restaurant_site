@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'item'
 
-attr_reader = :name, :description, :item, :image
+attr_reader = :name, :description, :image
 
 describe Item do
   it 'has a name' do
