@@ -13,5 +13,6 @@ class Item
     self.name == other.name
     self.price == other.price
     self.description == other.description
+    self.image_name == other.image_name
   end
 end
