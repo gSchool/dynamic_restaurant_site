@@ -1,6 +1,6 @@
 require 'spec_helper'
-
 require 'item'
+require 'timecop'
 
 describe Item do
   it 'has a name' do
@@ -25,4 +25,11 @@ describe Item do
 
     expect(item1).to eq item2
   end
+  it "freezes time" do
+    Timecop.freeze Date.new(2014, 3, 14) do
+      expect(Date.today).to eq(Date.new 2014, 3, 14)
+    end
+  end
 end
+
+
