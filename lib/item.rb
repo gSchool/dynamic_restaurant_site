@@ -1,8 +1,9 @@
 class Item
-  def initialize(name, price, description)
+  def initialize(name, price, description, image= nil)
     @name = name
     @price = price
     @description = description
+    @image = image
   end
 
   def name
