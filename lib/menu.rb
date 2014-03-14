@@ -2,7 +2,7 @@ require 'item'
 
 class Menu
   def items
-      data = IO.readlines("/Users/elsaschneiders/gSchoolWork/dynamic_restaurant_site/dynamic_restaurant_site/config/menu.csv")
+      data = IO.readlines("config/menu.csv")
       num_rows = data.count - 1
 
       i=0
