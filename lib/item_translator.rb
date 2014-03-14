@@ -3,7 +3,7 @@ class ItemTranslator
     data = Array.new
 
     filename = 'config/' + filename
-    
+
     filepath = File.expand_path(filename)
     File.open(filepath, File::RDONLY).each do |info|
       data += info.split(/,/)
