@@ -10,12 +10,12 @@ describe Menu do
 
     expect(menu.items).to eq expected
   end
-  it "converts a CSV to items" do
+  it "converts a CSV to items, ignoring header" do
     info = Menu.new
 
     actual = info.translate("test_menu.csv")
 
-    expected =  [ Item.new("name", "price", "description", "image"),
+    expected =  [
                   Item.new("Channa Masala", "5.95", "Yummy goodness", "food1.jpg"),
                 ]
 
