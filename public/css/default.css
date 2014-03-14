@@ -53,17 +53,19 @@ ul {
 a {
     color: #efa609;
 }
+h2{
+    padding-top: 1em;
+}
 
 div.menu{
-    padding-top: 2em;
     padding-left: 1em;
+    paddint-bottom: 1em;
 }
 
 div.item{
     display: inline-block;
     padding-left: 2em;
     padding-bottom: 1em;
-    float: left;
     width: 46%
 }
 #x3 {
