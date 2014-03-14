@@ -2,7 +2,9 @@ class ItemTranslator
   def translate(filename)
     data = Array.new
 
-    filepath = File.expand_path('config/test_menu.csv')
+    filename = 'config/' + filename
+    
+    filepath = File.expand_path(filename)
     File.open(filepath, File::RDONLY).each do |info|
       data += info.split(/,/)
     end
