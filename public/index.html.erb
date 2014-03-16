@@ -32,7 +32,7 @@
 
   <dl>
     <% Menu.new.translate("menu.csv").each do |item| %>
-      <dt><%= item.name %> - <%= item.price %></dt>
+      <dt><%= item.name %> - <%= item.discount? %></dt>
       <dd><%= item.description %><br />
       <img src=/images/<%= item.image %>\></dd>
     <% end %>

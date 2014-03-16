@@ -15,4 +15,18 @@ describe Item do
 
     expect(item1).to eq (item2)
   end
+
+  it 'lowers item price on wednesdays' do
+
+    item = Item.new("Shalala", 5.95, "Tastes", "Blob.jpg")
+
+    day = Date.today
+    day = true if day.wday == 3
+    day = false if day.wday != 3
+    if day == true
+      expect(item.discount?).to eq(5.36)
+    else
+      expect(item.discount?).to eq (5.95)
+    end
+  end
 end
