@@ -1,10 +1,13 @@
-require 'item'
+require 'csv_reader'
 
 class Menu
-  def items
-    [
-      Item.new("Channa Masala", 5.95, "Yummy goodness", "food1"),
-      Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "food2")
-    ]
+  def create_menu(import)
+    raw_array = Csv_reader.new.run(import)
+    menu_array = []
+    raw_array.shift
+    raw_array.each do |item|
+      menu_array << Item.new(item[0], item[1], item[2], item[3])
+    end
+    menu_array
   end
 end
