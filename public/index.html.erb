@@ -31,7 +31,7 @@
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
 
-  <h2>Menu Items</h2>
+  <h2><%= Date::DAYNAMES[Date.today.wday] %> Menu Items</h2>
   <div class="menu">
     <% x=1 %>
     <% Menu.new(File.expand_path('./config/menu.csv')).items.each do |item| %>
