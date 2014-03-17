@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='//fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+  <link href="/css/normalize.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/default.css" rel="stylesheet" type="text/css">
+  <title>The Foods of Southern India</title>
+</head>
+<body>
+
+<header>The Foods of Southern India</header>
+
+<main>
+  <p>
+    Squid meggings chillwave, dreamcatcher 8-bit Pinterest mlkshk salvia Shoreditch vegan.
+    Forage paleo viral narwhal American Apparel tattooed. Mlkshk chillwave tofu Carles, banh
+    mi Odd Future put a bird on it. Lomo Carles beard Etsy, put a bird on it sartorial raw
+    denim ugh 8-bit artisan 90's stumptown.</p>
+
+    Try-hard street art hella Truffaut, freegan Godard bespoke trust fund biodiesel 8-bit
+    umami American Apparel tousled authentic XOXO. Selvage PBR skateboard art party, kogi
+    pork belly master cleanse asymmetrical chia craft beer gastropub drinking
+    vinegar. Brooklyn narwhal meh biodiesel cred, cardigan vinyl sustainable disrupt direct trade.
+
+  </p>
+  <img src="/images/food1.jpg">
+
+  <dl>
+    <% Menu.new.create_menu("config/menu.csv").each do |item| %>
+       <dt><%= item.name %> - <%= item.price%></dt>
+       <dd><img src="/images/<%= item.picture %>.jpg"><br>
+       <%= item.description %> </dd>
+    <% end %>
+  </dl>
+</main>
+
+<footer>
+  <address>
+    123 Main Street
+    Boulder, CO 80301
+    <a href="mailto:bob@example.com">Contact Us</a>
+  </address>
+  &copy; <%= Date.today.year %>
+</footer>
+
+</body>
+</html>
