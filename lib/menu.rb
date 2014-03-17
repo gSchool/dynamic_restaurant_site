@@ -1,5 +1,5 @@
 require 'item'
-require 'CSV'
+require 'csv'
 
 class Menu
   def initialize(file_path)
