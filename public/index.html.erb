@@ -31,7 +31,7 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <% Menu.new.translate("menu.csv").each do |item| %>
+    <% Menu.new(File.expand_path('../config/menu.csv', __FILE__)).items.each do |item| %>
       <dt><%= item.name %> - <%= item.discount? %></dt>
       <dd><%= item.description %><br />
       <img src=/images/<%= item.image %>\></dd>

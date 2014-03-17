@@ -2,27 +2,15 @@ require 'item'
 require 'CSV'
 
 class Menu
-  def items
-    [
-      Item.new("Channa Masala", 5.95, "Yummy goodness"),
-      Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness")
-    ]
+  def initialize(file_path)
+    @file_path = file_path
   end
 
-  def translate(file)
-    data = Array.new
-    line_number = 0
+  def items
+    data = []
 
-    filename = 'config/' + file
-
-    filepath = File.expand_path(filename)
-    CSV.foreach(filepath) do |line|
-      if line_number == 0
-        line_number += 1
-      else
-        one, two, three, four = line
-        data << Item.new(one,two,three,four)
-      end
+    CSV.foreach(@file_path, {headers: true}) do |line|
+        data << Item.new(line[0], line[1], line[2], line[3])
     end
     data
   end
