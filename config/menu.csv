@@ -3,6 +3,6 @@ day,name,price,description,image
 "Tuesday,Wednesday,Thursday",Chicken Tikka Masala,5.95,Yummy goodness,food2.jpg
 "Wednesday,Thursday,Friday",Saag Paneer,5.95,Yummy goodness,food3.jpg
 "Thursday,Friday,Saturday",Alu Gobi,5.95,Yummy goodness,food4.jpg
-"Friday,Saturday,Sunday",Samsosa Chat,5.95,Yummy goodness,food5.jpg
-"Saturday,Sunday,Monday",Lamb Kabob,5.95,Yummy goodness,food6.jpg
-"Sunday,Monday,Tuesday",Tandoori Chicken,5.95,Yummy goodness,food7.jpg
+"Friday,Saturday,Sunday,Monday",Samsosa Chat,5.95,Yummy goodness,food5.jpg
+"Saturday,Sunday,Monday,Tuesday",Lamb Kabob,5.95,Yummy goodness,food6.jpg
+"Sunday,Monday,Tuesday,Wednesday",Tandoori Chicken,5.95,Yummy goodness,food7.jpg
