@@ -13,7 +13,7 @@
 <main>
   <img src="/images/restaurant.jpg">
 
-  <% featured_content = Content.new(File.expand_path('../dynamic_restaurant_site/config/content.csv')) %>
+  <% featured_content = Content.new(File.expand_path('./config/content.csv')) %>
   <% featured_content.paragraphs.each do |paragraph| %>
     <p>
       <%= paragraph %>
