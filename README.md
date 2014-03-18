@@ -28,4 +28,4 @@ You can find them in the `spec/features` directory.
 NOTE: Whenever you change a ruby file, you need to stop the server, and restart it.
 
 ## Staging
-URL: http://mighty-meadow-3585.herokuapp.com/
+URL: indian-foods-dynamic.herokuapp.com
