@@ -1,5 +1,6 @@
 require 'erb'
 require 'menu'
+require 'content'
 
 class App
   def call(env)
