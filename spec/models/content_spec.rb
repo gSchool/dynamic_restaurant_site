@@ -3,8 +3,8 @@ require 'content'
 
 describe Content do
   it "reads content from a csv" do
-    paragraph = Content.new(File.expand_path('../dynamic_restaurant_site/config/content.csv'))
+    paragraph = Content.new(File.expand_path('../dynamic_restaurant_site/config/sample_content.csv'))
 
-    expect(paragraph.paragraphs[0]).to eq "But be all this as it may; let the unseen, ambiguous synod in the air, or the vindictive princes and potentates of fire, have to do or not with earthly Ahab, yet, in this present matter of his leg, he took plain practical procedures; he called the carpenter."
+    expect(paragraph.paragraphs[0]).to eq "a paragraph about stuff"
   end
 end
