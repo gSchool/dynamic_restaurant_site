@@ -30,13 +30,12 @@
   </p>
   <img src="/images/food1.jpg">
 
-  <dl>
-    <dt>Channa Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
-    
-    <dt>Chicken Tikka Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
-  </dl>
+  <ul>
+    <% Menu.new.items.each do |item| %>
+      <li><%= item.name %> - <%= item.price %></li>
+      <li><%= item.description %></li>
+    <% end %>
+  </ul>
 </main>
 
 <footer>
@@ -45,7 +44,7 @@
     Boulder, CO 80301
     <a href="mailto:bob@example.com">Contact Us</a>
   </address>
-  &copy; 2013
+  &copy; <%= Time.now.year %>
 </footer>
 
 </body>
