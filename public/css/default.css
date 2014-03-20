@@ -71,7 +71,7 @@ div.item {
     width: 46%
 }
 
-#x3 {
+div.item:nth-child(3) {
     clear: left;
 }
 
