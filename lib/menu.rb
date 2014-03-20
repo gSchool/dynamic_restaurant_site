@@ -7,7 +7,7 @@ class Menu
 
     array = []
     csv_data.each do |row|
-      array.push(Item.new(row["name"], row["price"], row["description"], row["image"]))
+      array.push(Item.new(row["name"], row["price"], row["description"], row["image"], row["day"]))
 
     end
     array
