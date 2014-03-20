@@ -8,7 +8,7 @@ describe Item do
   end
   it 'has a price' do
   item = Item.new("Channa Masala", 5.95, "Yummy goodness")
-  expect(item.price).to eq 5.95
+  expect(item.price(Date.new(2014,03,11))).to eq 5.95
   end
   it 'has a description' do
     item = Item.new("Channa Masala", 5.95, "Yummy goodness")
