@@ -6,6 +6,7 @@ body {
     /* Center the page */
     margin: 0 auto;
     background-color: #EEEEEE;
+    background-image: url(/images/skulls.png)
 }
 
 header {
