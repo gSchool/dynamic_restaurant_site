@@ -3,7 +3,7 @@ require 'csv'
 require 'weekday_converter'
 
 class Menu
-  def initialize(file)
+  def get_menu(file)
     @spreadsheet = CSV.read(file, headers: true)
   end
 

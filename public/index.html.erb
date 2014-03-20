@@ -24,7 +24,9 @@
 
   <div class="menu">
     <% x=1 %>
-    <% Menu.new(File.expand_path('./config/menu.csv')).items.each do |item| %>
+    <% menu = Menu.new %>
+    <% menu.get_menu(File.expand_path('./config/menu.csv')) %>
+    <% menu.items.each do |item| %>
       <div class="item item" id="x<%= x %>">
         <img class="small" src="/images/<%= item.image_name %>">
 
