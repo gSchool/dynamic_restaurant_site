@@ -2,7 +2,7 @@ require 'csv'
 
 class Content
 
-  def initialize(file_path)
+  def get_content(file_path)
     @paragraphs = CSV.read(file_path, headers: true)
   end
 

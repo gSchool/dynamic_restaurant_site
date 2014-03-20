@@ -13,7 +13,8 @@
 <main>
   <img src="/images/restaurant.jpg">
 
-  <% featured_content = Content.new(File.expand_path('./config/content.csv')) %>
+  <% featured_content = Content.new %>
+  <% featured_content.get_content(File.expand_path('./config/content.csv')) %>
   <% featured_content.paragraphs.each do |paragraph| %>
     <p>
       <%= paragraph %>
