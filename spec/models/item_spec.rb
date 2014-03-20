@@ -21,12 +21,29 @@ describe Item do
     item = Item.new("Shalala", 5.95, "Tastes", "Blob.jpg")
 
     day = Date.today
-    day = true if day.wday == 3
-    day = false if day.wday != 3
+    if day.wday == 3
+      day = true
+    else
+      day = false
+    end
+
     if day == true
       expect(item.discount?).to eq(5.36)
     else
       expect(item.discount?).to eq (5.95)
     end
+  end
+
+  it 'knows what days an item is available' do
+    item = Item.new("Shalala", 5.95, "Tastes", "Blob.jpg", "Tuesday-Wednesday-Thursday")
+
+    item.weekdays_available
+
+    day = Date.today.wday
+
+    actual = item.available?(day)
+
+    visit "/"
+      expect(actual).to eq(true)
   end
 end

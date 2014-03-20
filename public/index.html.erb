@@ -19,9 +19,13 @@
 
   <dl>
     <% Menu.new(File.expand_path('../config/menu.csv', __FILE__)).items.each do |item| %>
-      <dt><%= item.name %> - <%= item.discount? %></dt>
-      <dd><%= item.description %><br />
-      <img src=/images/<%= item.image %>\></dd>
+      <% item.weekdays_available %>
+      <% day = Date.today.wday %>
+      <% if item.available?(day) %>
+        <dt><%= item.name %> - <%= item.discount? %></dt>
+        <dd><%= item.description %><br />
+        <img src=/images/<%= item.image %>\></dd>
+      <% end %>
     <% end %>
   </dl>
 </main>

@@ -10,7 +10,7 @@ class Menu
     data = []
 
     CSV.foreach(@file_path, {headers: true}) do |line|
-        data << Item.new(line[0], line[1], line[2], line[3])
+        data << Item.new(line[0], line[1], line[2], line[3], line[4])
     end
     data
   end
