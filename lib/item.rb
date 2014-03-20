@@ -6,7 +6,6 @@ class Item
     @price = price
     @description = description
     @image_name = image_name
-
   end
 
   def == (other)

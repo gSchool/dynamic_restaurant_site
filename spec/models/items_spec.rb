@@ -6,10 +6,12 @@ describe Item do
     item = Item.new("Channa Masala", 5.95, "Yummy goodness")
     expect(item.name).to eq "Channa Masala"
   end
+
   it 'has a price' do
-  item = Item.new("Channa Masala", 5.95, "Yummy goodness")
-  expect(item.price(Date.new(2014,03,11))).to eq 5.95
+    item = Item.new("Channa Masala", 5.95, "Yummy goodness")
+    expect(item.price(Date.new(2014, 03, 11))).to eq 5.95
   end
+
   it 'has a description' do
     item = Item.new("Channa Masala", 5.95, "Yummy goodness")
     expect(item.description).to eq "Yummy goodness"
@@ -28,7 +30,7 @@ describe Item do
 
   it "discounts the prices by 10% on Wendsdays" do
     item = Item.new("Channa Masala", 5.95, "Yummy goodness", "food1.jpg")
-    wed = Date.new(2014,03,12)
+    wed = Date.new(2014, 03, 12)
     expect(item.price(wed)).to eq("5.36")
   end
 end

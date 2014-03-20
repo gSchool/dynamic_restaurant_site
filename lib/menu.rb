@@ -30,7 +30,7 @@ class WdayConverter
         i += 1
       end
     end
-  converted_days_array
+    converted_days_array
   end
 end
 
