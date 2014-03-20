@@ -6,6 +6,7 @@ body {
     /* Center the page */
     margin: 0 auto;
     background-color: #EEEEEE;
+    background-image: url(/images/skulls.png)
 }
 
 header {
@@ -13,6 +14,7 @@ header {
     padding-bottom: .25em;
     font-size: 3em;
     border-bottom: 2px solid #efa609;
+    margin-bottom: .5em;
 }
 
 footer {
@@ -20,6 +22,7 @@ footer {
     padding-bottom: 1em;
     margin-top: 1em;
     text-align: center;
+    clear: both;
 }
 
 address {
@@ -31,8 +34,15 @@ address {
 
 img {
     display: inline-block;
-    width: 49%;
+    padding-right: 1em;
+    width: 100%;
     vertical-align: middle;
+}
+
+img.small {
+    width: 30%;
+    vertical-align: middle;
+    float: left;
 }
 
 ul {
@@ -45,7 +55,28 @@ a {
     color: #efa609;
 }
 
+h2 {
+    padding-top: 1em;
+}
+
+div.menu {
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+div.item {
+    display: inline-block;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    width: 46%
+}
+
+div.item:nth-child(3) {
+    clear: left;
+}
+
 dl {
+    float: right;
     font-size: 1.5em;
     display: inline-block;
     width: 40%;

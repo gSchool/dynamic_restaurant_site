@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='//fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+  <link href="/css/normalize.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/default.css" rel="stylesheet" type="text/css">
+  <title>The Foods of Southern India</title>
+</head>
+<body>
+
+<header>The Foods of Southern India</header>
+
+<main>
+  <img src="/images/restaurant.jpg">
+
+  <% featured_content = Content.new %>
+  <% featured_content.get_content(File.expand_path('./config/content.csv')) %>
+  <% featured_content.paragraphs.each do |paragraph| %>
+    <p>
+      <%= paragraph %>
+    </p>
+  <% end %>
+
+  <h2><%= Date::DAYNAMES[Date.today.wday] %> Menu Items</h2>
+
+  <div class="menu">
+    <% x=1 %>
+    <% menu = Menu.new %>
+    <% menu.get_menu(File.expand_path('./config/menu.csv')) %>
+    <% menu.items.each do |item| %>
+      <div class="item">
+        <img class="small" src="/images/<%= item.image_name %>">
+
+        <p><%= item.name %> - $<%= item.price %></>
+        <p> <%= item.description %></p>
+      </div>
+      <% x+=1 %>
+    <% end %>
+  </div>
+
+</main>
+
+<footer>
+  <address>
+    123 Main Street
+    Boulder, CO 80301
+    <a href="mailto:bob@example.com">Contact Us</a>
+  </address>
+  &copy; <%= Date.today.year %>
+</footer>
+
+</body>
+</html>
