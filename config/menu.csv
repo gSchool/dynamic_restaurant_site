@@ -1,5 +1,5 @@
-name,price,description,image
-Channa Masala,5.95,Yummy goodness,food1.jpg
-Chicken Tikka Masala,5.95,Yummy goodness,food2.jpg
-Saag Paneer,5.95,Yummy goodness,food3.jpg
-Alu Gobi,5.95,Yummy goodness,food4.jpg
+name,price,description,image,monday-tuesday-wednesday
+Channa Masala,5.95,Yummy goodness,food1.jpg, tuesday-wednesday-thursday
+Chicken Tikka Masala,5.95,Yummy goodness,food2.jpg, wednesday-thursday-friday
+Saag Paneer,5.95,Yummy goodness,food3.jpg, friday-saturday-sunday
+Alu Gobi,5.95,Yummy goodness,food4.jpg, saturday-sunday-monday

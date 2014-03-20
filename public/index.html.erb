@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='//fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+  <link href="/css/normalize.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/default.css" rel="stylesheet" type="text/css">
+  <title>The Foods of Southern India</title>
+</head>
+<body>
+
+<header>The Foods of Southern India</header>
+
+<main>
+  <p>
+    <% main_text = MainParagraphs.new(File.expand_path('../config/main_paragraph.txt', __FILE__)) %>
+    <%= main_text.read_file %>
+  </p>
+  <img src="/images/food1.jpg">
+
+  <dl>
+    <% Menu.new(File.expand_path('../config/menu.csv', __FILE__)).items.each do |item| %>
+      <% item.weekdays_available %>
+      <% day = Date.today.wday %>
+      <% if item.available?(day) %>
+        <dt><%= item.name %> - <%= item.discount? %></dt>
+        <dd><%= item.description %><br />
+        <img src=/images/<%= item.image %>\></dd>
+      <% end %>
+    <% end %>
+  </dl>
+</main>
+
+<footer>
+  <address>
+    123 Main Street
+    Boulder, CO 80301
+    <a href="mailto:bob@example.com">Contact Us</a>
+  </address>
+  &copy; <%= Date.today.year %>
+</footer>
+
+</body>
+</html>
