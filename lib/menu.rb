@@ -15,7 +15,7 @@ class Menu
       entrees = []
 
       while i<num_rows
-        entrees[i] = Item.new(data[i+1][0].chomp, data[i+1][1].chomp, data[i+1][2].chomp)
+        entrees[i] = Item.new(data[i+1][0].chomp, data[i+1][1].chomp, data[i+1][2].chomp, data[i+1][3], data[i+1][4])
         i+=1
       end
     entrees

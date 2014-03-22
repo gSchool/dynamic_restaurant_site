@@ -1,8 +1,10 @@
 class Item
-  def initialize(name, price, description)
+  def initialize(name, price, description, image, day)
     @name = name
     @price = price
     @description = description
+    @image = image
+    @day = day
   end
 
   def name
@@ -19,6 +21,14 @@ class Item
 
   def description
     @description
+  end
+
+  def image
+    @image
+  end
+  
+  def day
+    @day
   end
 
   def == (other)
