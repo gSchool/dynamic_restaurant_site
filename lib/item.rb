@@ -9,7 +9,11 @@ class Item
     @name
   end
 
-  def price
+  def price(day = Date.today)
+    if day.wednesday?
+      (Float(@price)*0.9).round(2).to_s
+    end
+  else
     @price
   end
 
